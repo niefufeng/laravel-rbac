@@ -65,7 +65,7 @@ class ServiceProvider extends LaravelServiceProvider
 
     protected function registerAliases()
     {
-        $this->app->alias('rbac', Rbac::class);
+        $this->app->alias(Rbac::class, 'rbac');
     }
 
     protected function registerBladeDirectives()
