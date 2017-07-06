@@ -19,6 +19,8 @@ class CreateRbacPermissions extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('description')->default('');
+
+            $table->unique('slug');
         });
     }
 
