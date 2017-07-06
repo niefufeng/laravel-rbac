@@ -1,6 +1,6 @@
 <?php
 
-namespace NieFufeng\LaravelRbac;
+namespace NieFufeng\LaravelRbac\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
