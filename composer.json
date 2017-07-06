@@ -1,36 +1,43 @@
 {
-    "name": "niefufeng/laravel-rbac",
-    "description": "Laravel5 RBAC",
-    "require": {
-        "php": ">7.1",
-        "laravel/framework": "5.*",
-        "illuminate/cache": "5.*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^6.0"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Outshine",
-            "email": "niefufeng@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "NieFufeng\\LaravelRbac\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "NieFufeng\\LaravelRbac\\Test\\": "tests"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "NieFufeng\\LaravelRbac\\ServiceProvider"
-            ]
-        }
+  "name": "niefufeng/laravel-rbac",
+  "description": "Laravel5 RBAC",
+  "minimum-stability": "dev",
+  "keywords": [
+    "laravel",
+    "illuminate",
+    "auth",
+    "rbac"
+  ],
+  "require": {
+    "php": ">7.1",
+    "laravel/framework": "5.*",
+    "illuminate/cache": "5.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Outshine",
+      "email": "niefufeng@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "NieFufeng\\LaravelRbac\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NieFufeng\\LaravelRbac\\Test\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "NieFufeng\\LaravelRbac\\ServiceProvider"
+      ]
+    }
+  }
 }
