@@ -78,7 +78,7 @@ trait UserTrait
     {
         if (is_string($roles)) {
             $requireAll = false;
-            $roles = (array)$roles;
+            $roles = explode(',', $roles);
         }
 
         foreach ($roles as $role) {
@@ -103,7 +103,7 @@ trait UserTrait
     {
         if (is_string($permissions)) {
             $requireAll = false;
-            $permissions = (array)$permissions;
+            $permissions = explode(',', $permissions);
         }
 
         $userPermissions = $this->cachedRoles()
