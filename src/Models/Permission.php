@@ -39,7 +39,7 @@ class Permission extends Model implements PermissionInterface
      */
     public function roles()
     {
-        return $this->belongsToMany(config('rbac.eloquent.role'), 'role_permission', 'permission_id', 'role_id');
+        return $this->belongsToMany(config('rbac.eloquent.role'), 'role_permissions', 'permission_id', 'role_id');
     }
 
     /**

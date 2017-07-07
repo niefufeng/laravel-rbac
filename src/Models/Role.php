@@ -43,7 +43,7 @@ class Role extends Model implements RoleInterface
      */
     public function users()
     {
-        return $this->belongsToMany(config('rbac.eloquent.user'), 'user_role', 'role_id', 'user_id');
+        return $this->belongsToMany(config('rbac.eloquent.user'), 'user_roles', 'role_id', 'user_id');
     }
 
     /**
@@ -51,7 +51,7 @@ class Role extends Model implements RoleInterface
      */
     public function permissions()
     {
-        return $this->belongsToMany(config('rbac.eloquent.permission'), 'role_permission', 'role_id', 'permission_id');
+        return $this->belongsToMany(config('rbac.eloquent.permission'), 'role_permissions', 'role_id', 'permission_id');
     }
 
     /**
