@@ -26,7 +26,7 @@ trait UserTrait
      */
     public function roles()
     {
-        return $this->belongsToMany(config('rbac.eloquent.role'), 'user_role', 'user_id', 'role_id');
+        return $this->belongsToMany(config('rbac.eloquent.role'), 'user_roles', 'user_id', 'role_id');
     }
 
     public function save(array $options = [])
@@ -147,6 +147,12 @@ trait UserTrait
     public function detachRoles($roles)
     {
         $this->roles()->detach($roles);
+        $this->forgetCachedRoles();
+    }
+
+    public function syncRoles($roles)
+    {
+        $this->roles()->sync($roles);
         $this->forgetCachedRoles();
     }
 }
