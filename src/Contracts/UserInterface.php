@@ -8,11 +8,11 @@ interface UserInterface
 {
     public function roles();
 
-    public function hasRoles($roles, bool $requireAll = false): bool;
+    public function hasRoles($roles, bool $requireAll = false);
 
-    public function hasPermissions($permissions, bool $requireAll = false): bool;
+    public function hasPermissions($permissions, bool $requireAll = false);
 
-    public function cachedRoles(): Collection;
+    public function cachedRoles();
 
     public function forgetCachedRoles();
 

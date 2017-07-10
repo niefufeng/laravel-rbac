@@ -20,7 +20,7 @@ interface RoleInterface
 
     public function detachUsers($users);
 
-    public function cachedPermissions(): Collection;
+    public function cachedPermissions();
 
     public function forgetCachedPermissions();
 }

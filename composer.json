@@ -9,7 +9,7 @@
     "rbac"
   ],
   "require": {
-    "php": ">7.1",
+    "php": ">=7.0",
     "laravel/framework": "5.*",
     "illuminate/cache": "5.*"
   },

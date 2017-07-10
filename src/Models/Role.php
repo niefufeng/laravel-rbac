@@ -125,7 +125,7 @@ class Role extends Model implements RoleInterface
     /**
      * @return Collection|Permission[]
      */
-    public function cachedPermissions(): Collection
+    public function cachedPermissions()
     {
         $cacheKey = 'laravel_rbac_permissions_for_role_' . $this->getKey();
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace NieFufeng\LaravelRbac;
+namespace NieFufeng\LaravelRbac\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

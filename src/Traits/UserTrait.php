@@ -59,7 +59,7 @@ trait UserTrait
      * 缓存用户的Roles
      * @return Collection|Role[]
      */
-    public function cachedRoles(): Collection
+    public function cachedRoles()
     {
         $cacheKey = 'laravel_rbac_roles_for_user_' . $this->getKey();
 
@@ -74,7 +74,7 @@ trait UserTrait
      * @param bool $requireAll 当传入多个角色时，是否需要验证所有角色都存在
      * @return bool
      */
-    public function hasRoles($roles, bool $requireAll = false): bool
+    public function hasRoles($roles, bool $requireAll = false)
     {
         if (is_string($roles)) {
             $requireAll = false;
@@ -99,7 +99,7 @@ trait UserTrait
      * @param bool $requireAll 单传入多个权限时，是否需要验证所有权限都存在
      * @return bool
      */
-    public function hasPermissions($permissions, bool $requireAll = false): bool
+    public function hasPermissions($permissions, bool $requireAll = false)
     {
         if (is_string($permissions)) {
             $requireAll = false;
@@ -133,7 +133,7 @@ trait UserTrait
      * @param bool $requireAll 单传入多个权限时，是否需要验证所有权限都存在
      * @return bool
      */
-    public function may($permissions, bool $requireAll = false): bool
+    public function may($permissions, bool $requireAll = false)
     {
         return $this->hasPermissions($permissions, $requireAll);
     }
